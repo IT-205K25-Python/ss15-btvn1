@@ -12,6 +12,16 @@ def conver_user_input_to_int(content:str) -> int:
 inventory_stock = 100
 
 def add_stock(amount):
+    '''
+    Add product quantity into inventory stock.
+
+    Args:
+        - amount: int
+            Quantity of products added to inventory.
+
+    Returns:
+        - None
+    '''
  
     if(amount <= 0):
         print("Dữ liệu nhập vào phải lớn hơn 0.") 

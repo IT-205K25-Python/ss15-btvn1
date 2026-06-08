@@ -4,11 +4,13 @@ total_revenue = 0.0
 
 def print_report():
     '''
-    Chức năng: Hàm dùng để in ra báo cáo tồn kho và doanh thu
+    Display inventory and revenue report.
 
-    Args: None
+    Args:
+        - None
 
-    Returns: None
+    Returns:
+        - None
     '''
 
     global inventory_stock

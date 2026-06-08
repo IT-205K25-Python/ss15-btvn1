@@ -2,6 +2,23 @@ inventory_stock = 100
 total_revenue = 0.0
 
 def process_sale(quantity, price):
+    '''
+    Process selling operation and validate inventory quantity.
+
+    Args:
+        - quantity: int
+            Quantity customer wants to buy.
+
+        - price: int
+            Unit price of product.
+
+    Returns:
+        - tuple
+            (temp_price, discount, vat)
+
+        - None
+            If inventory is not enough.
+    '''
     global inventory_stock
     if(quantity > inventory_stock):
         print(f"Không đủ hàng trong kho hiện tại chỉ còn {inventory_stock}")
@@ -10,6 +27,22 @@ def process_sale(quantity, price):
     return calculate_final_price(quantity, price)
 
 def calculate_final_price(quantity, price):
+    '''
+    Calculate subtotal, discount and VAT for customer invoice.
+
+    Args:
+        - quantity: int
+            Quantity of products purchased.
+
+        - price: int
+            Product unit price.
+
+    Returns:
+        - tuple
+            temp_price: float
+            discount: float
+            vat: float
+    '''
 
     temp_price = quantity * price
 
