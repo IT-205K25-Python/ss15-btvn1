@@ -23,3 +23,17 @@ def add_stock(amount):
     print(f"Tồn kho hiện tại: {inventory_stock}")
 
 
+amount = None
+while True:
+    try: 
+        amount = int(input("Nhập số lượng sản phẩm cần mua: "))
+
+    except ValueError:
+        print("Không hợp lệ. Vui lòng nhập lại")
+
+    else:
+        if amount > 0:
+            break
+        print("Số lượng phải lớn hơn 0")
+
+add_stock(amount)

@@ -1,6 +1,13 @@
 # (1) Phân tích và thiết kế:
 #
 # Phân định rõ biến nào là Local, biến nào là Global trong luồng chạy. 
+# Biến global:
+# - inventory_stock
+# - total_revenue
+# Biến local:
+# - temp_price
+# - discount
+# - vat
 # (2) Triển khai code:
 #
 # Tối thiểu phải có 4 hàm: add_stock(), calculate_final_price(), process_sale(), và print_report(), cùng 1 hàm main() để chạy vòng lặp while.
