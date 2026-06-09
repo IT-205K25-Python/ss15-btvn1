@@ -8,6 +8,16 @@
 # - temp_price
 # - discount
 # - vat
+# - amount
+# - quantity
+# - price
+# - quantity_input
+# - price_input
+# - bill
+# - final_total
+# - choice
+# - user_input
+
 # (2) Triển khai code:
 #
 # Tối thiểu phải có 4 hàm: add_stock(), calculate_final_price(), process_sale(), và print_report(), cùng 1 hàm main() để chạy vòng lặp while.
@@ -58,6 +68,7 @@ def add_stock(amount):
  
     if(amount <= 0):
         print("Dữ liệu nhập vào phải lớn hơn 0.") 
+        return
 
     global inventory_stock
     inventory_stock += amount
@@ -169,7 +180,7 @@ while True:
                 final_total = temp_price * (1 - discount) + vat
 
                 inventory_stock -= quantity_input
-                total_revenue += price_input
+                total_revenue += final_total
 
                 print("-> Hóa đơn chi tiết:")
                 print(f"Số lượng: {quantity_input} | Đơn giá: ${float(price_input)}")

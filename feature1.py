@@ -25,6 +25,7 @@ def add_stock(amount):
  
     if(amount <= 0):
         print("Dữ liệu nhập vào phải lớn hơn 0.") 
+        return
 
     global inventory_stock
     inventory_stock += amount
